@@ -4,14 +4,16 @@ echo "Raspbian german configuration"
 #System Updates
 apt-get update && apt upgrade -y
 #Generate German Locale
-echo "de_DE.UTF-8 UTF-8" > /etc/locale.gen
+echo "en_US.UTF-8 UTF-8
+de_DE.UTF-8 UTF-8" > /etc/locale.gen
 locale-gen
-export LANG=en_GB
-export LANGUAGE=en_GB
+export LC_ALL=en_US
+export LANG=en_US
+export LANGUAGE=en_US
 #Change Timezone to Europe/Berlin
 timedatectl set-timezone Europe/Berlin
 #German Keyboard Layout
-echo 'XKBMODEL="pc105"
+echo 'XKBMODEL="logitech_base"
 XKBLAYOUT="de"
 XKBVARIANT=""
 XKBOPTIONS=""
